@@ -7,8 +7,8 @@ import numpy as np
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
 
-st.title("Food Recommendation System")
-st.text("Let us help you with ordering")
+st.title("Food Recommendation System 🤍")
+st.text("Let my app help you with ordering food babe🤍✨")
 st.image("foood.jpg")
 
 ## nav = st.sidebar.radio("Navigation",["Home","IF Necessary 1","If Necessary 2"])
@@ -24,8 +24,8 @@ cuisine = st.selectbox("Choose your favourite!",['Healthy Food', 'Snack', 'Desse
 st.subheader("How well do you want the dish to be?")  #RATING
 val = st.slider("from poor to the best!",0,10)
 
-food = pd.read_csv("input/food.csv")
-ratings = pd.read_csv("input/ratings.csv")
+food = pd.read_csv("food.csv")
+ratings = pd.read_csv("ratings.csv")
 combined = pd.merge(ratings, food, on='Food_ID')
 #ans = food.loc[(food.C_Type == cuisine) & (food.Veg_Non == vegn),['Name','C_Type','Veg_Non']]
 
